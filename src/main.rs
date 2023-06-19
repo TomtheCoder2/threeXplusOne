@@ -81,11 +81,11 @@ fn main() {
             if arg == "--cache" {
                 unsafe { USE_CACHE = true };
             } else if arg.starts_with("--cache-size=") {
-                let size = arg.split("=").collect::<Vec<&str>>()[1].parse::<usize>().unwrap();
+                let size = arg.split('=').collect::<Vec<&str>>()[1].parse::<usize>().unwrap();
                 unsafe { USE_CACHE = true };
                 cache_size = size;
             } else if arg.starts_with("--n=") {
-                let size = arg.split("=").collect::<Vec<&str>>()[1].parse::<u32>().unwrap();
+                let size = arg.split('=').collect::<Vec<&str>>()[1].parse::<u32>().unwrap();
                 n = size;
             }
         }
